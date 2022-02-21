@@ -69,7 +69,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         image: DecorationImage(
                           fit: BoxFit.scaleDown,
                           image: Image.asset(
-                            'assets/images/renprop_.png',
+                            'assets/images/Layer_2.png',
                           ).image,
                         ),
                       ),
@@ -83,8 +83,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(0),
                       bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(18),
-                      topRight: Radius.circular(18),
+                      topLeft: Radius.circular(0),
+                      topRight: Radius.circular(28),
                     ),
                   ),
                   child: Container(
@@ -94,8 +94,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0),
                         bottomRight: Radius.circular(0),
-                        topLeft: Radius.circular(18),
-                        topRight: Radius.circular(18),
+                        topLeft: Radius.circular(0),
+                        topRight: Radius.circular(28),
                       ),
                     ),
                     child: SingleChildScrollView(
