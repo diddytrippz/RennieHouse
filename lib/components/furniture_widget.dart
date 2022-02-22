@@ -288,7 +288,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     Expanded(
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 20, 0, 0),
+                                            0, 25, 0, 0),
                                         child: Container(
                                           width: double.infinity,
                                           height: 240,
