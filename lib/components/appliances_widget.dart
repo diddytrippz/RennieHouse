@@ -114,7 +114,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 12, 0, 0),
+                                                    0, 22, 0, 0),
                                             child: Container(
                                               width: 60,
                                               height: 4,
@@ -130,7 +130,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 20, 0, 0),
+                                          12, 40, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -154,7 +154,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Stove not working',
@@ -197,7 +197,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 40, 0, 0),
+                                          0, 30, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
