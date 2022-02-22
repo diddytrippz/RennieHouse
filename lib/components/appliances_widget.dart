@@ -205,16 +205,16 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                           labelText: 'Description',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                           ),
                                           focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
@@ -225,7 +225,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 40, 24, 0),
+                                                  20, 50, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1

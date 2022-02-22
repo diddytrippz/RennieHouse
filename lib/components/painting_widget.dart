@@ -104,7 +104,7 @@ class _PaintingWidgetState extends State<PaintingWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 12, 0, 0),
+                                                    0, 22, 0, 0),
                                             child: Container(
                                               width: 60,
                                               height: 4,
@@ -120,7 +120,7 @@ class _PaintingWidgetState extends State<PaintingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 20, 0, 0),
+                                          12, 40, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _PaintingWidgetState extends State<PaintingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 20, 0, 0),
+                                          0, 40, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Ceiling needs to be painted',
@@ -188,12 +188,12 @@ class _PaintingWidgetState extends State<PaintingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 20, 0, 0),
+                                          0, 40, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Additional notes\n',
+                                          labelText: 'Description\n',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0xFFC5C5C5),

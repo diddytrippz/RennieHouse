@@ -101,7 +101,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 12, 0, 0),
+                                                    0, 22, 0, 0),
                                             child: Container(
                                               width: 60,
                                               height: 4,
@@ -117,7 +117,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 30, 0, 0),
+                                          12, 40, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -141,24 +141,25 @@ class _OthersWidgetState extends State<OthersWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 30, 0, 0),
+                                          0, 40, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Additional notes\n',
+                                          labelText: 'Description\n',
+                                          hintText: '\n',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                           ),
                                           focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),

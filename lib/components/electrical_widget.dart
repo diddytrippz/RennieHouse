@@ -104,7 +104,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 12, 0, 0),
+                                                    0, 22, 0, 0),
                                             child: Container(
                                               width: 60,
                                               height: 4,
@@ -120,7 +120,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 20, 0, 0),
+                                          12, 40, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Emergency lights not working',
@@ -189,24 +189,25 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 35, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
                                         decoration: InputDecoration(
+                                          labelText: 'Description\n',
                                           hintText: 'Additional notes\n',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                           ),
                                           focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF42A5F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
@@ -217,7 +218,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 40, 24, 0),
+                                                  20, 50, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1

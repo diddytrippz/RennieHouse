@@ -104,7 +104,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 12, 0, 0),
+                                                    0, 22, 0, 0),
                                             child: Container(
                                               width: 60,
                                               height: 4,
@@ -120,7 +120,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 20, 0, 0),
+                                          12, 40, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Damaged bed base',
@@ -190,15 +190,16 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 35, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Additional notes\n',
+                                          labelText: 'Description',
+                                          hintText: '\n',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFF2F95F5),
+                                              color: Color(0xFF42A5F5),
                                               width: 6,
                                             ),
                                             borderRadius:
@@ -206,7 +207,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                           ),
                                           focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFF2F95F5),
+                                              color: Color(0xFF42A5F5),
                                               width: 6,
                                             ),
                                             borderRadius:
@@ -218,7 +219,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 40, 24, 0),
+                                                  20, 50, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1
