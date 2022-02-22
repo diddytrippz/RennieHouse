@@ -144,7 +144,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 35, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Damaged bed base',
@@ -190,7 +190,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 10, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,

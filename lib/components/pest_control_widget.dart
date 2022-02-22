@@ -144,7 +144,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 30, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Bed bugs',
@@ -186,7 +186,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 20, 0, 0),
+                                          0, 10, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,

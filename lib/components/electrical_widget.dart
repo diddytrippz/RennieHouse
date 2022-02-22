@@ -144,7 +144,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 35, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Emergency lights not working',
@@ -189,7 +189,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 10, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,

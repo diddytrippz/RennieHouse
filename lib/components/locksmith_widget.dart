@@ -144,7 +144,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 30, 0, 0),
+                                          0, 45, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Broken door handle (Unit)',
@@ -190,7 +190,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 20, 0, 0),
+                                          0, 10, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
