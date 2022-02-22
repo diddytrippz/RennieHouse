@@ -219,7 +219,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 55, 24, 0),
+                                                  20, 45, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1
