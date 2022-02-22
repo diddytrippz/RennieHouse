@@ -198,16 +198,16 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                           hintText: 'Additional notes\n',
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF2F95F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                           ),
                                           focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFC5C5C5),
-                                              width: 2,
+                                              color: Color(0xFF2F95F5),
+                                              width: 6,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8),
@@ -232,7 +232,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                             ),
                                         textAlign: TextAlign.start,
                                         maxLines: 6,
-                                        keyboardType: TextInputType.url,
+                                        keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
                                             return 'This field cannot be empty';

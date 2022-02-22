@@ -183,6 +183,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                             ),
                                         textAlign: TextAlign.start,
                                         maxLines: 6,
+                                        keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
                                             return 'This field cannot be empty';

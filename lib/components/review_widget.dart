@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../main.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -48,26 +49,23 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                      child: AuthUserStreamWidget(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(80),
-                          child: Image.network(
-                            valueOrDefault<String>(
-                              currentUserPhoto,
-                              'https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                            ),
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
+                    AuthUserStreamWidget(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(80),
+                        child: CachedNetworkImage(
+                          imageUrl: valueOrDefault<String>(
+                            currentUserPhoto,
+                            'https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
                           ),
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),

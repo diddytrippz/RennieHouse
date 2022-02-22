@@ -228,6 +228,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                             ),
                                         textAlign: TextAlign.start,
                                         maxLines: 6,
+                                        keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
                                             return 'This field cannot be empty';

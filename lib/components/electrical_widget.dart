@@ -231,6 +231,7 @@ class _ElectricalWidgetState extends State<ElectricalWidget> {
                                             ),
                                         textAlign: TextAlign.start,
                                         maxLines: 6,
+                                        keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
                                             return 'This field cannot be empty';
