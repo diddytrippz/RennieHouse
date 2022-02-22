@@ -53,14 +53,24 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                       color: Colors.transparent,
                       elevation: 40,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(0),
+                          bottomRight: Radius.circular(0),
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
                       ),
                       child: Container(
                         width: double.infinity,
                         height: 100,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).tertiaryColor,
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(0),
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                          ),
                         ),
                       ),
                     ),

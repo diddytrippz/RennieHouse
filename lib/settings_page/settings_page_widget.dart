@@ -913,7 +913,8 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 1, 0, 0),
                 child: InkWell(
                   onTap: () async {
-                    await launchURL('https://campusafrica.co.za');
+                    await launchURL(
+                        'https://www.wits.ac.za/accommodation/contact-us/');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,

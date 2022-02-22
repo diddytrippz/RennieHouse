@@ -27,7 +27,7 @@ class _RulesBookWidgetState extends State<RulesBookWidget> {
           child: Stack(
             children: [
               FlutterFlowPdfViewer(
-                assetPath: 'assets/pdfs/2021_Residence_Fees.pdf',
+                assetPath: 'assets/pdfs/Residence_Fees_2022.pdf',
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 1,
                 horizontalScroll: false,
