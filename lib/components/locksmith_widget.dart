@@ -218,7 +218,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 50, 24, 0),
+                                                  20, 55, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1

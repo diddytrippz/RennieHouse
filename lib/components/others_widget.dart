@@ -117,7 +117,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 40, 0, 0),
+                                          12, 60, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -170,7 +170,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                                   .primaryBackground,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 40, 24, 0),
+                                                  20, 55, 24, 0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1
@@ -239,7 +239,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                                     Expanded(
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 20, 0, 0),
+                                            0, 40, 0, 0),
                                         child: Container(
                                           width: double.infinity,
                                           height: 240,
