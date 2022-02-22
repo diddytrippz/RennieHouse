@@ -120,7 +120,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 40, 0, 0),
+                                          12, 20, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 45, 0, 0),
+                                          0, 35, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Damaged bed base',
@@ -190,7 +190,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 35, 0, 0),
+                                          0, 25, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
@@ -232,7 +232,7 @@ class _FurnitureWidgetState extends State<FurnitureWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                         textAlign: TextAlign.start,
-                                        maxLines: 6,
+                                        maxLines: 5,
                                         keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {

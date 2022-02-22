@@ -120,7 +120,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 40, 0, 0),
+                                          12, 20, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 40, 0, 0),
+                                          0, 30, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Bed bugs',
@@ -186,7 +186,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 40, 0, 0),
+                                          0, 20, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
@@ -228,7 +228,7 @@ class _PestControlWidgetState extends State<PestControlWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                         textAlign: TextAlign.start,
-                                        maxLines: 6,
+                                        maxLines: 5,
                                         keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {

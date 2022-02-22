@@ -120,7 +120,7 @@ class _PlumbingWidgetState extends State<PlumbingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 40, 0, 0),
+                                          12, 20, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _PlumbingWidgetState extends State<PlumbingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 45, 0, 0),
+                                          0, 35, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Damaged toilet sit',
@@ -194,7 +194,7 @@ class _PlumbingWidgetState extends State<PlumbingWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 30, 0, 0),
+                                          0, 20, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
@@ -235,7 +235,7 @@ class _PlumbingWidgetState extends State<PlumbingWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                         textAlign: TextAlign.start,
-                                        maxLines: 6,
+                                        maxLines: 5,
                                         keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {

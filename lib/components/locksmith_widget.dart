@@ -120,7 +120,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 40, 0, 0),
+                                          12, 20, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -144,7 +144,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 40, 0, 0),
+                                          0, 30, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Broken door handle (Unit)',
@@ -190,7 +190,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 40, 0, 0),
+                                          0, 20, 0, 0),
                                       child: TextFormField(
                                         controller: reasonController,
                                         obscureText: false,
@@ -231,7 +231,7 @@ class _LocksmithWidgetState extends State<LocksmithWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                         textAlign: TextAlign.start,
-                                        maxLines: 6,
+                                        maxLines: 5,
                                         keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
