@@ -195,53 +195,59 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         hidesUnderline: true,
                                       ),
                                     ),
-                                    TextFormField(
-                                      controller: reasonController,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        labelText: 'Description',
-                                        enabledBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0xFFC5C5C5),
-                                            width: 2,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 40, 0, 0),
+                                      child: TextFormField(
+                                        controller: reasonController,
+                                        obscureText: false,
+                                        decoration: InputDecoration(
+                                          labelText: 'Description',
+                                          enabledBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFFC5C5C5),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(8),
+                                          focusedBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFFC5C5C5),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          filled: true,
+                                          fillColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryBackground,
+                                          contentPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  20, 40, 24, 0),
                                         ),
-                                        focusedBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0xFFC5C5C5),
-                                            width: 2,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        filled: true,
-                                        fillColor: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                20, 40, 24, 0),
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                      textAlign: TextAlign.start,
-                                      maxLines: 6,
-                                      keyboardType: TextInputType.name,
-                                      validator: (val) {
-                                        if (val.isEmpty) {
-                                          return 'Field is required';
-                                        }
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Lexend Deca',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                        textAlign: TextAlign.start,
+                                        maxLines: 6,
+                                        keyboardType: TextInputType.name,
+                                        validator: (val) {
+                                          if (val.isEmpty) {
+                                            return 'Field is required';
+                                          }
 
-                                        return null;
-                                      },
+                                          return null;
+                                        },
+                                      ),
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
