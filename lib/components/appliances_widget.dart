@@ -193,7 +193,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .height *
-                                                  0.08,
+                                                  0.09,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
@@ -275,7 +275,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                 fontWeight: FontWeight.normal,
                                               ),
                                           textAlign: TextAlign.start,
-                                          maxLines: 7,
+                                          maxLines: 6,
                                           keyboardType: TextInputType.name,
                                           validator: (val) {
                                             if (val.isEmpty) {
