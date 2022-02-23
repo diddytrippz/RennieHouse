@@ -129,7 +129,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               children: [
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 22, 0, 0),
+                                                      .fromSTEB(0, 15, 0, 0),
                                                   child: Container(
                                                     width: 60,
                                                     height: 4,
@@ -144,87 +144,82 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               ],
                                             ),
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    12, 30, 0, 0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                AutoSizeText(
-                                                  'Appliances',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .title1
-                                                      .override(
-                                                        fontFamily: 'Roboto',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        fontSize: 28,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                ),
-                                              ],
+                                          Expanded(
+                                            flex: 1,
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(12, 0, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  AutoSizeText(
+                                                    'Appliances',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1
+                                                        .override(
+                                                          fontFamily: 'Roboto',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0, 40, 0, 0),
-                                            child: FlutterFlowDropDown(
-                                              options: [
-                                                'Stove not working',
-                                                'Oven not working',
-                                                'Microwave not working',
-                                                'Fridge not working'
-                                              ].toList(),
-                                              onChanged: (val) => setState(
-                                                  () => budgetValue = val),
-                                              width: MediaQuery.of(context)
-                                                  .size
-                                                  .width,
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  0.09,
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Lexend Deca',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    fontSize: 14,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                  ),
-                                              hintText: 'Select option',
-                                              icon: Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                size: 15,
-                                              ),
-                                              fillColor:
+                                          FlutterFlowDropDown(
+                                            options: [
+                                              'Stove not working',
+                                              'Oven not working',
+                                              'Microwave not working',
+                                              'Fridge not working'
+                                            ].toList(),
+                                            onChanged: (val) => setState(
+                                                () => budgetValue = val),
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.09,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                            hintText: 'Select option',
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              elevation: 2,
-                                              borderColor: Color(0xFFDBE2E7),
-                                              borderWidth: 2,
-                                              borderRadius: 8,
-                                              margin: EdgeInsetsDirectional
-                                                  .fromSTEB(20, 20, 12, 20),
-                                              hidesUnderline: true,
+                                                      .primaryText,
+                                              size: 15,
                                             ),
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryBackground,
+                                            elevation: 2,
+                                            borderColor: Color(0xFFDBE2E7),
+                                            borderWidth: 2,
+                                            borderRadius: 8,
+                                            margin:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    20, 20, 12, 20),
+                                            hidesUnderline: true,
                                           ),
                                         ],
                                       ),
