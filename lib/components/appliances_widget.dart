@@ -147,7 +147,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                           Expanded(
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(12, 15, 0, 0),
+                                                  .fromSTEB(12, 10, 0, 0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -282,7 +282,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          16, 15, 16, 30),
+                                          16, 15, 16, 10),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
