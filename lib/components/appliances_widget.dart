@@ -275,7 +275,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                 fontWeight: FontWeight.normal,
                                               ),
                                           textAlign: TextAlign.start,
-                                          maxLines: 6,
+                                          maxLines: 7,
                                           keyboardType: TextInputType.name,
                                           validator: (val) {
                                             if (val.isEmpty) {
@@ -551,7 +551,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   text: 'Cancel',
                                                   options: FFButtonOptions(
                                                     width: double.infinity,
-                                                    height: 50,
+                                                    height: 60,
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primaryBackground,
