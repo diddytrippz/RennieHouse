@@ -114,7 +114,6 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Expanded(
-                                      flex: 1,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -145,7 +144,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                             ),
                                           ),
                                           Expanded(
-                                            flex: 2,
+                                            flex: 1,
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(12, 10, 0, 0),
@@ -330,7 +329,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       width: double.infinity,
                                       height:
                                           MediaQuery.of(context).size.height *
-                                              0.28,
+                                              0.26,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .tertiaryColor,
