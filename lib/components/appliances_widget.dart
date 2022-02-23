@@ -4,6 +4,7 @@ import '../backend/backend.dart';
 import '../backend/firebase_storage/storage.dart';
 import '../components/submitted_icon_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -170,6 +171,26 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                               FontWeight.bold,
                                                         ),
                                                   ),
+                                                  FlutterFlowIconButton(
+                                                    borderColor:
+                                                        Colors.transparent,
+                                                    borderRadius: 30,
+                                                    borderWidth: 1,
+                                                    buttonSize: 60,
+                                                    fillColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .campusGrey,
+                                                    icon: Icon(
+                                                      Icons.clear,
+                                                      color: Colors.white,
+                                                      size: 30,
+                                                    ),
+                                                    onPressed: () {
+                                                      print(
+                                                          'IconButton pressed ...');
+                                                    },
+                                                  ),
                                                 ],
                                               ),
                                             ),
@@ -190,10 +211,6 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               width: MediaQuery.of(context)
                                                   .size
                                                   .width,
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  0.09,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
@@ -533,42 +550,6 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                           fontWeight:
                                                               FontWeight.normal,
                                                         ),
-                                                    borderSide: BorderSide(
-                                                      color: Colors.transparent,
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius: 40,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 16, 0, 0),
-                                                child: FFButtonWidget(
-                                                  onPressed: () async {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  text: 'Cancel',
-                                                  options: FFButtonOptions(
-                                                    width: double.infinity,
-                                                    height: 60,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryBackground,
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .subtitle2
-                                                        .override(
-                                                          fontFamily:
-                                                              'Lexend Deca',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                    elevation: 0,
                                                     borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1,
