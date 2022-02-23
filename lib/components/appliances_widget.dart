@@ -235,7 +235,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       ),
                                     ),
                                     Expanded(
-                                      flex: 2,
+                                      flex: 1,
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 10, 0, 0),
