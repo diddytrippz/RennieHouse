@@ -140,133 +140,138 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Expanded(
                                       flex: 1,
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12, 10, 0, 0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'Appliances',
-                                              style: FlutterFlowTheme.of(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(12, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Appliances',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1
+                                                        .override(
+                                                          fontFamily: 'Roboto',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 20, 0, 0),
+                                            child: FlutterFlowDropDown(
+                                              options: [
+                                                'Stove not working',
+                                                'Oven not working',
+                                                'Microwave not working',
+                                                'Fridge not working'
+                                              ].toList(),
+                                              onChanged: (val) => setState(
+                                                  () => budgetValue = val),
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width,
+                                              height: 70,
+                                              textStyle: FlutterFlowTheme.of(
                                                       context)
-                                                  .title1
+                                                  .bodyText1
                                                   .override(
-                                                    fontFamily: 'Roboto',
+                                                    fontFamily: 'Lexend Deca',
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primaryText,
-                                                    fontSize: 28,
-                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                   ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 20, 0, 0),
-                                        child: FlutterFlowDropDown(
-                                          options: [
-                                            'Stove not working',
-                                            'Oven not working',
-                                            'Microwave not working',
-                                            'Fridge not working'
-                                          ].toList(),
-                                          onChanged: (val) =>
-                                              setState(() => budgetValue = val),
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: 70,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Lexend Deca',
+                                              hintText: 'Select option',
+                                              icon: Icon(
+                                                Icons
+                                                    .keyboard_arrow_down_rounded,
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
+                                                size: 15,
                                               ),
-                                          hintText: 'Select option',
-                                          icon: Icon(
-                                            Icons.keyboard_arrow_down_rounded,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            size: 15,
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              elevation: 2,
+                                              borderColor: Color(0xFFDBE2E7),
+                                              borderWidth: 2,
+                                              borderRadius: 8,
+                                              margin: EdgeInsetsDirectional
+                                                  .fromSTEB(20, 20, 12, 20),
+                                              hidesUnderline: true,
+                                            ),
                                           ),
-                                          fillColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryBackground,
-                                          elevation: 2,
-                                          borderColor: Color(0xFFDBE2E7),
-                                          borderWidth: 2,
-                                          borderRadius: 8,
-                                          margin:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20, 20, 12, 20),
-                                          hidesUnderline: true,
-                                        ),
+                                        ],
                                       ),
                                     ),
-                                    Expanded(
-                                      flex: 2,
-                                      child: TextFormField(
-                                        controller: reasonController,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelText: 'Description',
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Color(0xFF42A5F5),
-                                              width: 6,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
+                                    TextFormField(
+                                      controller: reasonController,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelText: 'Description',
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF42A5F5),
+                                            width: 6,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Color(0xFF42A5F5),
-                                              width: 6,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          filled: true,
-                                          fillColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20, 45, 24, 0),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                        textAlign: TextAlign.start,
-                                        maxLines: 4,
-                                        keyboardType: TextInputType.name,
-                                        validator: (val) {
-                                          if (val.isEmpty) {
-                                            return 'Field is required';
-                                          }
-
-                                          return null;
-                                        },
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF42A5F5),
+                                            width: 6,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        filled: true,
+                                        fillColor: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        contentPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                20, 45, 24, 0),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                      textAlign: TextAlign.start,
+                                      maxLines: 4,
+                                      keyboardType: TextInputType.name,
+                                      validator: (val) {
+                                        if (val.isEmpty) {
+                                          return 'Field is required';
+                                        }
+
+                                        return null;
+                                      },
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -312,7 +317,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 15, 0, 0),
+                                          0, 15, 0, 20),
                                       child: Container(
                                         width: double.infinity,
                                         height: 240,
@@ -334,7 +339,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 20, 20, 20),
+                                                  20, 20, 20, 30),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
