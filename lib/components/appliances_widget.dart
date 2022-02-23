@@ -329,76 +329,187 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Container(
-                                        width: double.infinity,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Color(0x3B1D2429),
-                                            )
-                                          ],
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(0),
-                                            bottomRight: Radius.circular(0),
-                                            topLeft: Radius.circular(16),
-                                            topRight: Radius.circular(16),
-                                          ),
+                                    Container(
+                                      width: double.infinity,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.35,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Color(0x3B1D2429),
+                                          )
+                                        ],
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(0),
+                                          bottomRight: Radius.circular(0),
+                                          topLeft: Radius.circular(16),
+                                          topRight: Radius.circular(16),
                                         ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20, 10, 20, 0),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              FFButtonWidget(
-                                                onPressed: () async {
-                                                  final selectedMedia =
-                                                      await selectMediaWithSourceBottomSheet(
-                                                    context: context,
-                                                    allowPhoto: true,
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            20, 10, 20, 0),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            FFButtonWidget(
+                                              onPressed: () async {
+                                                final selectedMedia =
+                                                    await selectMediaWithSourceBottomSheet(
+                                                  context: context,
+                                                  allowPhoto: true,
+                                                );
+                                                if (selectedMedia != null &&
+                                                    validateFileFormat(
+                                                        selectedMedia
+                                                            .storagePath,
+                                                        context)) {
+                                                  showUploadMessage(
+                                                    context,
+                                                    'Uploading file...',
+                                                    showLoading: true,
                                                   );
-                                                  if (selectedMedia != null &&
-                                                      validateFileFormat(
+                                                  final downloadUrl =
+                                                      await uploadData(
                                                           selectedMedia
                                                               .storagePath,
-                                                          context)) {
+                                                          selectedMedia.bytes);
+                                                  ScaffoldMessenger.of(context)
+                                                      .hideCurrentSnackBar();
+                                                  if (downloadUrl != null) {
+                                                    setState(() =>
+                                                        uploadedFileUrl =
+                                                            downloadUrl);
                                                     showUploadMessage(
                                                       context,
-                                                      'Uploading file...',
-                                                      showLoading: true,
+                                                      'File Uploaded!',
                                                     );
-                                                    final downloadUrl =
-                                                        await uploadData(
-                                                            selectedMedia
-                                                                .storagePath,
-                                                            selectedMedia
-                                                                .bytes);
-                                                    ScaffoldMessenger.of(
-                                                            context)
-                                                        .hideCurrentSnackBar();
-                                                    if (downloadUrl != null) {
-                                                      setState(() =>
-                                                          uploadedFileUrl =
-                                                              downloadUrl);
-                                                      showUploadMessage(
-                                                        context,
-                                                        'File Uploaded!',
-                                                      );
-                                                    } else {
-                                                      showUploadMessage(
-                                                        context,
-                                                        'Failed to upload media',
-                                                      );
-                                                      return;
-                                                    }
+                                                  } else {
+                                                    showUploadMessage(
+                                                      context,
+                                                      'Failed to upload media',
+                                                    );
+                                                    return;
                                                   }
+                                                }
+                                              },
+                                              text: 'Upload',
+                                              options: FFButtonOptions(
+                                                width: double.infinity,
+                                                height: 50,
+                                                color: Color(0xFFDBE2E7),
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .subtitle2
+                                                    .override(
+                                                      fontFamily: 'Lexend Deca',
+                                                      color: Color(0xFF262D34),
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
+                                                borderSide: BorderSide(
+                                                  color: Colors.transparent,
+                                                  width: 1,
+                                                ),
+                                                borderRadius: 40,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 16, 0, 0),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  if (!formKey.currentState
+                                                      .validate()) {
+                                                    return;
+                                                  }
+
+                                                  if (budgetValue == null) {
+                                                    await showDialog(
+                                                      context: context,
+                                                      builder:
+                                                          (alertDialogContext) {
+                                                        return AlertDialog(
+                                                          content: Text(
+                                                              'Dropdown field cannot be empty. Please select an option'),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      alertDialogContext),
+                                                              child: Text('Ok'),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                    return;
+                                                  }
+
+                                                  final maintenanceCreateData =
+                                                      createMaintenanceRecordData(
+                                                    issue: budgetValue,
+                                                    status: 'Submitted',
+                                                    email: currentUserEmail,
+                                                    createdTime:
+                                                        getCurrentTimestamp,
+                                                    displayName:
+                                                        currentUserDisplayName,
+                                                    room: currentUserDocument
+                                                        ?.room,
+                                                    building:
+                                                        currentUserDocument
+                                                            ?.building,
+                                                    notes:
+                                                        reasonController.text,
+                                                    rating: 0,
+                                                    uid: currentUserUid,
+                                                    category: 'Appliances',
+                                                    isDone: false,
+                                                    photoUrl: uploadedFileUrl,
+                                                    assigned: 'Maintenace Team',
+                                                  );
+                                                  await MaintenanceRecord
+                                                      .collection
+                                                      .doc()
+                                                      .set(
+                                                          maintenanceCreateData);
+                                                  await AirtableCall.call(
+                                                    user: currentUserEmail,
+                                                    issue: budgetValue,
+                                                    room: currentUserDocument
+                                                        ?.room,
+                                                    building:
+                                                        currentUserDocument
+                                                            ?.building,
+                                                    status: 'Submitted',
+                                                    created: dateTimeFormat(
+                                                        'd/M/y',
+                                                        getCurrentTimestamp),
+                                                  );
+                                                  await showModalBottomSheet(
+                                                    isScrollControlled: true,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    barrierColor:
+                                                        Color(0x64F5F5F5),
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return Padding(
+                                                        padding: MediaQuery.of(
+                                                                context)
+                                                            .viewInsets,
+                                                        child:
+                                                            SubmittedIconWidget(),
+                                                      );
+                                                    },
+                                                  );
                                                 },
-                                                text: 'Upload',
+                                                text: 'Save',
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
                                                   height: 50,
@@ -422,163 +533,45 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   borderRadius: 40,
                                                 ),
                                               ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 16, 0, 0),
-                                                child: FFButtonWidget(
-                                                  onPressed: () async {
-                                                    if (!formKey.currentState
-                                                        .validate()) {
-                                                      return;
-                                                    }
-
-                                                    if (budgetValue == null) {
-                                                      await showDialog(
-                                                        context: context,
-                                                        builder:
-                                                            (alertDialogContext) {
-                                                          return AlertDialog(
-                                                            content: Text(
-                                                                'Dropdown field cannot be empty. Please select an option'),
-                                                            actions: [
-                                                              TextButton(
-                                                                onPressed: () =>
-                                                                    Navigator.pop(
-                                                                        alertDialogContext),
-                                                                child:
-                                                                    Text('Ok'),
-                                                              ),
-                                                            ],
-                                                          );
-                                                        },
-                                                      );
-                                                      return;
-                                                    }
-
-                                                    final maintenanceCreateData =
-                                                        createMaintenanceRecordData(
-                                                      issue: budgetValue,
-                                                      status: 'Submitted',
-                                                      email: currentUserEmail,
-                                                      createdTime:
-                                                          getCurrentTimestamp,
-                                                      displayName:
-                                                          currentUserDisplayName,
-                                                      room: currentUserDocument
-                                                          ?.room,
-                                                      building:
-                                                          currentUserDocument
-                                                              ?.building,
-                                                      notes:
-                                                          reasonController.text,
-                                                      rating: 0,
-                                                      uid: currentUserUid,
-                                                      category: 'Appliances',
-                                                      isDone: false,
-                                                      photoUrl: uploadedFileUrl,
-                                                      assigned:
-                                                          'Maintenace Team',
-                                                    );
-                                                    await MaintenanceRecord
-                                                        .collection
-                                                        .doc()
-                                                        .set(
-                                                            maintenanceCreateData);
-                                                    await AirtableCall.call(
-                                                      user: currentUserEmail,
-                                                      issue: budgetValue,
-                                                      room: currentUserDocument
-                                                          ?.room,
-                                                      building:
-                                                          currentUserDocument
-                                                              ?.building,
-                                                      status: 'Submitted',
-                                                      created: dateTimeFormat(
-                                                          'd/M/y',
-                                                          getCurrentTimestamp),
-                                                    );
-                                                    await showModalBottomSheet(
-                                                      isScrollControlled: true,
-                                                      backgroundColor:
-                                                          Colors.transparent,
-                                                      barrierColor:
-                                                          Color(0x64F5F5F5),
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return Padding(
-                                                          padding:
-                                                              MediaQuery.of(
-                                                                      context)
-                                                                  .viewInsets,
-                                                          child:
-                                                              SubmittedIconWidget(),
-                                                        );
-                                                      },
-                                                    );
-                                                  },
-                                                  text: 'Save',
-                                                  options: FFButtonOptions(
-                                                    width: double.infinity,
-                                                    height: 50,
-                                                    color: Color(0xFFDBE2E7),
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .subtitle2
-                                                        .override(
-                                                          fontFamily:
-                                                              'Lexend Deca',
-                                                          color:
-                                                              Color(0xFF262D34),
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                    borderSide: BorderSide(
-                                                      color: Colors.transparent,
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius: 40,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 16, 0, 0),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  Navigator.pop(context);
+                                                },
+                                                text: 'Cancel',
+                                                options: FFButtonOptions(
+                                                  width: double.infinity,
+                                                  height: 50,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryBackground,
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .subtitle2
+                                                      .override(
+                                                        fontFamily:
+                                                            'Lexend Deca',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                                  elevation: 0,
+                                                  borderSide: BorderSide(
+                                                    color: Colors.transparent,
+                                                    width: 1,
                                                   ),
+                                                  borderRadius: 40,
                                                 ),
                                               ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 16, 0, 0),
-                                                child: FFButtonWidget(
-                                                  onPressed: () async {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  text: 'Cancel',
-                                                  options: FFButtonOptions(
-                                                    width: double.infinity,
-                                                    height: 50,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryBackground,
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .subtitle2
-                                                        .override(
-                                                          fontFamily:
-                                                              'Lexend Deca',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                    elevation: 0,
-                                                    borderSide: BorderSide(
-                                                      color: Colors.transparent,
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius: 40,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
