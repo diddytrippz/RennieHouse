@@ -282,7 +282,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          16, 15, 16, 10),
+                                          16, 15, 16, 15),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -326,7 +326,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       width: double.infinity,
                                       height:
                                           MediaQuery.of(context).size.height *
-                                              0.3,
+                                              0.28,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .tertiaryColor,
