@@ -177,7 +177,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 30, 0, 0),
+                                                    0, 28, 0, 0),
                                             child: FlutterFlowDropDown(
                                               options: [
                                                 'Stove not working',
