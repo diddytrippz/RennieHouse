@@ -177,7 +177,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                             flex: 1,
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 20, 0, 0),
+                                                  .fromSTEB(0, 10, 0, 0),
                                               child: FlutterFlowDropDown(
                                                 options: [
                                                   'Stove not working',
@@ -193,7 +193,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height *
-                                                    0.09,
+                                                    0.07,
                                                 textStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyText1
