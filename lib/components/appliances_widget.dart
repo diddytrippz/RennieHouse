@@ -145,6 +145,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                             ),
                                           ),
                                           Expanded(
+                                            flex: 2,
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(12, 10, 0, 0),
@@ -189,7 +190,10 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               width: MediaQuery.of(context)
                                                   .size
                                                   .width,
-                                              height: 70,
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.09,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
