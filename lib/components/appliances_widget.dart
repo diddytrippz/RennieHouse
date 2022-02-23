@@ -143,39 +143,39 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Expanded(
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(12, 0, 0, 0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'Appliances',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title1
-                                                        .override(
-                                                          fontFamily: 'Roboto',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 28,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                  ),
-                                                ],
-                                              ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    12, 45, 0, 0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text(
+                                                  'Appliances',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .title1
+                                                      .override(
+                                                        fontFamily: 'Roboto',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontSize: 28,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 20, 0, 0),
+                                                    0, 50, 0, 0),
                                             child: FlutterFlowDropDown(
                                               options: [
                                                 'Stove not working',
@@ -268,7 +268,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                         textAlign: TextAlign.start,
-                                        maxLines: 4,
+                                        maxLines: 5,
                                         keyboardType: TextInputType.name,
                                         validator: (val) {
                                           if (val.isEmpty) {
@@ -281,7 +281,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          16, 15, 16, 0),
+                                          16, 15, 16, 30),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -323,7 +323,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 15, 0, 0),
                                       child: Container(
                                         width: double.infinity,
                                         height: 240,
@@ -345,7 +345,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20, 20, 20, 30),
+                                                  20, 20, 20, 0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
