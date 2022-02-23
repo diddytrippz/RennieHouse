@@ -190,10 +190,6 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                               width: MediaQuery.of(context)
                                                   .size
                                                   .width,
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  0.09,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
@@ -234,7 +230,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                       flex: 1,
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 10, 0, 0),
+                                            0, 30, 0, 0),
                                         child: TextFormField(
                                           controller: reasonController,
                                           obscureText: false,
@@ -289,7 +285,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          16, 15, 16, 15),
+                                          16, 15, 16, 20),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
