@@ -174,9 +174,9 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   FlutterFlowIconButton(
                                                     borderColor:
                                                         Colors.transparent,
-                                                    borderRadius: 30,
+                                                    borderRadius: 50,
                                                     borderWidth: 1,
-                                                    buttonSize: 60,
+                                                    buttonSize: 45,
                                                     fillColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -184,11 +184,10 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                     icon: Icon(
                                                       Icons.clear,
                                                       color: Colors.white,
-                                                      size: 30,
+                                                      size: 25,
                                                     ),
-                                                    onPressed: () {
-                                                      print(
-                                                          'IconButton pressed ...');
+                                                    onPressed: () async {
+                                                      Navigator.pop(context);
                                                     },
                                                   ),
                                                 ],
