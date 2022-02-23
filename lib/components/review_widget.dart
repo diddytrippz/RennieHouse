@@ -105,18 +105,11 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                         glowColor: FlutterFlowTheme.of(context).mellow,
                       ),
                     ),
-                    Wrap(
-                      spacing: 0,
-                      runSpacing: 0,
-                      alignment: WrapAlignment.start,
-                      crossAxisAlignment: WrapCrossAlignment.start,
-                      direction: Axis.horizontal,
-                      runAlignment: WrapAlignment.start,
-                      verticalDirection: VerticalDirection.down,
-                      clipBehavior: Clip.none,
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                        Expanded(
                           child: FlutterFlowChoiceChips(
                             initiallySelected: choiceChipsValues != null
                                 ? choiceChipsValues

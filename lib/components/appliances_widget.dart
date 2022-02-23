@@ -101,7 +101,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                           ),
                         ),
                         child: Column(
-                          mainAxisSize: MainAxisSize.max,
+                          mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Expanded(
