@@ -140,7 +140,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          12, 20, 0, 0),
+                                          12, 10, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -164,7 +164,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 45, 0, 0),
+                                          0, 20, 0, 0),
                                       child: FlutterFlowDropDown(
                                         options: [
                                           'Stove not working',
@@ -175,8 +175,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         onChanged: (val) =>
                                             setState(() => budgetValue = val),
                                         width:
-                                            MediaQuery.of(context).size.width *
-                                                0.9,
+                                            MediaQuery.of(context).size.width,
                                         height: 70,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyText1
@@ -191,7 +190,8 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         hintText: 'Select option',
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
-                                          color: Color(0xFFD93A0E),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
                                           size: 15,
                                         ),
                                         fillColor: FlutterFlowTheme.of(context)
@@ -205,59 +205,53 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                         hidesUnderline: true,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 10, 0, 0),
-                                      child: TextFormField(
-                                        controller: reasonController,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelText: 'Description',
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Color(0xFF42A5F5),
-                                              width: 6,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
+                                    TextFormField(
+                                      controller: reasonController,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelText: 'Description',
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF42A5F5),
+                                            width: 6,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: Color(0xFF42A5F5),
-                                              width: 6,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          filled: true,
-                                          fillColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20, 45, 24, 0),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                        textAlign: TextAlign.start,
-                                        maxLines: 5,
-                                        keyboardType: TextInputType.name,
-                                        validator: (val) {
-                                          if (val.isEmpty) {
-                                            return 'Field is required';
-                                          }
-
-                                          return null;
-                                        },
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF42A5F5),
+                                            width: 6,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        filled: true,
+                                        fillColor: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        contentPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                20, 45, 24, 0),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                      textAlign: TextAlign.start,
+                                      maxLines: 4,
+                                      keyboardType: TextInputType.name,
+                                      validator: (val) {
+                                        if (val.isEmpty) {
+                                          return 'Field is required';
+                                        }
+
+                                        return null;
+                                      },
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -303,7 +297,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 25, 0, 0),
+                                          0, 15, 0, 0),
                                       child: Container(
                                         width: double.infinity,
                                         height: 240,
@@ -375,7 +369,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                 text: 'Upload',
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
-                                                  height: 60,
+                                                  height: 50,
                                                   color: Color(0xFFDBE2E7),
                                                   textStyle: FlutterFlowTheme
                                                           .of(context)
@@ -493,7 +487,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   text: 'Save',
                                                   options: FFButtonOptions(
                                                     width: double.infinity,
-                                                    height: 60,
+                                                    height: 50,
                                                     color: Color(0xFFDBE2E7),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
@@ -525,7 +519,7 @@ class _AppliancesWidgetState extends State<AppliancesWidget> {
                                                   text: 'Cancel',
                                                   options: FFButtonOptions(
                                                     width: double.infinity,
-                                                    height: 60,
+                                                    height: 50,
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primaryBackground,
